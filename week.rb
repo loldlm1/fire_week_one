@@ -20,5 +20,3 @@ end
 week_fire = Week.new(romano)
 
 puts week_fire.romano_a_numero("XL")
-
- 
