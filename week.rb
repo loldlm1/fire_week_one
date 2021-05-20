@@ -21,10 +21,8 @@ class Week
 
   def array_random(a)
     array = @array.to_a.sample(a)
-    if puts array.inspect
-    else 
-      return array.max
-    end
+    puts array.inspect
+    return array.max
   end
 end
 
@@ -32,4 +30,4 @@ week_fire = Week.new(romano,array)
 
 week_fire.romano_a_numero("XL") 
 
-week_fire.array_random(5) 
+puts week_fire.array_random(5)
