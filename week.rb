@@ -1,8 +1,11 @@
 romano = ["I","IV","V","IX","X","XL","L","XC","C","CD","D","CM","M"]
 
+array = array
+
 class Week
-  def initialize(romano)
+  def initialize(romano, array)
     @romano = romano
+    @array = array
   end
 
   def romano_a_numero(string)
@@ -15,8 +18,15 @@ class Week
       r
     end
   end
+
+  def array_randon(a)
+    @array = (0..100).to_a.sample(a)
+    print @array.inspect, "== #{@array.max} \n"
+  end
 end
 
-week_fire = Week.new(romano)
+week_fire = Week.new(romano,array)
 
 week_fire.romano_a_numero("XL") 
+
+week_fire.array_randon(5)
