@@ -12,11 +12,11 @@ class Week
    temp = string.scan(reg)
    temp.uniq.inject(0) do |r,ele|
      r += temp.count(ele)*hash[ele]
-     "#{r}"
+     r
    end
   end
 end
 
 week_fire = Week.new(romano)
 
-puts week_fire.romano_a_numero("XL")
+week_fire.romano_a_numero("XL")
