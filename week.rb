@@ -30,4 +30,5 @@ week_fire = Week.new(romano,array)
 
 week_fire.romano_a_numero("XL") 
 
-puts week_fire.array_random(5)
+week_fire.array_random(5)
+
