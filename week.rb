@@ -23,7 +23,7 @@ class Week
     array = @array.to_a.sample(a)
     if puts array.inspect
     else 
-      puts array.max
+      return array.max
     end
   end
 end
