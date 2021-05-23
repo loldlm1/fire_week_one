@@ -33,7 +33,7 @@ class Week
     "#{likes.to_i}K" 
     when 100.000..999.999
     "#{likes.to_i}K"
-    when 1000000..999000000
+    when 100_000_120..999_122_122
     "#{likes.to_i}M"
     end
   end
@@ -44,4 +44,5 @@ week_fire.romano_a_numero("XL")
 
 week_fire.array_random(5)
 
-puts week_fire.facebook(423123123)
+puts week_fire.facebook(123.421)
+
