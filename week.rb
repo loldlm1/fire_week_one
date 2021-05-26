@@ -24,11 +24,24 @@ class Week
     puts array.inspect
     return array.max
   end
-end
 
-week_fire = Week.new(romano,array)
+  def facebook(likes)
+    if likes > 999 and likes < 1000000
+      "#{likes}K"   
+    elsif likes > 1000000
+      "#{likes}M"
+    else likes < 900
+      likes
+    end
+  end
+end
+week_fire = Week.new(romano, array)
 
 week_fire.romano_a_numero("XL") 
 
 week_fire.array_random(5)
 
+puts week_fire.facebook(421)
+puts week_fire.facebook(3234)
+puts week_fire.facebook(324123)
+puts week_fire.facebook(12341223)
