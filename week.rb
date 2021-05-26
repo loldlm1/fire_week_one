@@ -26,13 +26,12 @@ class Week
   end
 
   def facebook(likes)
-    if likes > 999 and likes < 1000000
-       "#{likes / 1000}k"  
-    elsif likes > 1000000
-      "#{likes / 10000000}M"
+    if likes > 999 and likes < 1_000_000
+      p "#{likes / 1_000}k" 
+    elsif likes > 1_000_000
+      p "#{likes / 1_000_000}M"
     else 
-      likes < 900
-      likes
+      p "#{likes}"
     end
   end
 end
@@ -42,7 +41,7 @@ week_fire.romano_a_numero("XL")
 
 week_fire.array_random(5)
 
-puts week_fire.facebook(421)
-puts week_fire.facebook(4234)
-puts week_fire.facebook(324123)
-puts week_fire.facebook(42341223)
+week_fire.facebook(341)
+week_fire.facebook(7_234)
+week_fire.facebook(324_123)
+week_fire.facebook(23_341_223)
