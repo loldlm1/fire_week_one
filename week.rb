@@ -28,7 +28,7 @@ class Week
   def facebook(likes)
     if likes > 999 and likes < 1_000_000
       p "#{likes / 1_000}k" 
-    elsif likes > 1_000_000
+    elsif likes >=  1_000_000
       p "#{likes / 1_000_000}M"
     else 
       p "#{likes}"
@@ -44,4 +44,4 @@ week_fire.array_random(5)
 week_fire.facebook(341)
 week_fire.facebook(7_234)
 week_fire.facebook(324_123)
-week_fire.facebook(23_341_223)
+week_fire.facebook(1_000_000)
