@@ -27,11 +27,11 @@ class Week
 
   def facebook(likes)
     if likes > 999 and likes < 1_000_000
-      p "#{likes / 1_000}k" 
+       "#{likes / 1_000}k" 
     elsif likes >=  1_000_000
-      p "#{likes / 1_000_000}M"
+       "#{likes / 1_000_000}M"
     else 
-      p "#{likes}"
+       "#{likes}"
     end
   end
 end
