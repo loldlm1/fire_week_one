@@ -34,7 +34,15 @@ class Week
       likes
     end
   end
+
+  def array_hash(r)
+    enum = r.each_with_index do |i,value|
+      a = [value,i]
+      print [a].to_h
+    end
+  end
 end
+
 week_fire = Week.new(romano, array)
 
 week_fire.romano_a_numero("XL") 
@@ -45,3 +53,5 @@ puts week_fire.facebook(421)
 puts week_fire.facebook(3234)
 puts week_fire.facebook(324123)
 puts week_fire.facebook(12341223)
+
+week_fire.array_hash(["make", "it", "real", 34, 925, 322, 0, 1, 2, 3])
