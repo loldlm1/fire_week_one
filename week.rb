@@ -36,8 +36,8 @@ class Week
   end
 
   def array_hash(r)
-    x = r.each_with_index
-    b = x.sort_by {  |value, i| }.to_h
+    r = r.each_with_index
+    b = r.sort_by {  |value, i| }.to_h
     b.invert
   end
 end
