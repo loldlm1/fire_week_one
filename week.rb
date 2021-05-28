@@ -36,10 +36,9 @@ class Week
   end
 
   def array_hash(r)
-    enum = r.each_with_index do |i,value|
-      a = [value,i]
-      print [a].to_h
-    end
+    x = r.each_with_index
+    b = x.sort_by {  |value, i| }.to_h
+    b.invert
   end
 end
 
