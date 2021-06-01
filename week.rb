@@ -40,6 +40,11 @@ class Week
     r = r.sort_by {  |value, i| }.to_h
     r.invert
   end
+
+  def vocales(a)
+    a = a.map { |nombre| nombre.count("aeiou")}
+    puts a
+  end
 end
 
 week_fire = Week.new(romano, array)
@@ -51,3 +56,5 @@ week_fire.array_random(5)
 week_fire.facebook(1_000_000)
 
 week_fire.array_hash(["make", "it", "real", 34, 925, 322, 0, 1, 2, 3])
+
+week_fire.vocales(["a","a","a"])
