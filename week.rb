@@ -42,8 +42,9 @@ class Week
   end
 
   def vocales(a)
-    a = a.map { |nombre| nombre.count("aeiou")}
-    puts a
+    vocales = %w(a e o u i)
+    a = a.each_with_object(Hash.new(0)) { |c,h| h[c] += 1 if vocales.include?(c) }
+    a
   end
 end
 
@@ -57,4 +58,4 @@ week_fire.facebook(1_000_000)
 
 week_fire.array_hash(["make", "it", "real", 34, 925, 322, 0, 1, 2, 3])
 
-week_fire.vocales(["a","a","a"])
+week_fire.vocales(["m", "u", "r", "c", "i", "e", "l", "a", "g", "o"])
