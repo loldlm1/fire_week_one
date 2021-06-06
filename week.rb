@@ -44,7 +44,10 @@ class Week
   def vocales(a)
     vocales = %w(a e o u i)
     a = a.each_with_object(Hash.new(0)) { |c,h| h[c] += 1 if vocales.include?(c) }
-    a
+    a.each do |value,key|
+      f = key,value
+      f 
+    end
   end
 end
 
