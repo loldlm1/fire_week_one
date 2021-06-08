@@ -42,12 +42,14 @@ class Week
   end
 
   def vocales(a)
-    vocales = %w(a e o u i)
-    a = a.each_with_object(Hash.new(0)) { |c,h| h[c] += 1 if vocales.include?(c) }
-    a.map do |value,key|
-      f = key,value
-      f 
-    end
+    vowels = %w(a e o u i)
+  a = a.each_with_object(Hash.new(0)) do |c,h|
+    h[c] += 1 if vowels.include?(c)
+  end
+  a.map.to_h do |value,key|
+    a = key,value
+    a
+  end
   end
 end
 
@@ -61,4 +63,4 @@ week_fire.facebook(1_000_000)
 
 week_fire.array_hash(["make", "it", "real", 34, 925, 322, 0, 1, 2, 3])
 
-week_fire.vocales(["m", "u", "r", "c", "i", "e", "l", "a", "g", "o"])
+puts week_fire.vocales(["c", "o", "m", "p", "u", "t", "a", "d", "o", "r", "a"])
