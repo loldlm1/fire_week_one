@@ -43,13 +43,13 @@ class Week
 
   def vocales(a)
     vowels = %w(a e o u i)
-  a = a.each_with_object(Hash.new(0)) do |c,h|
-    h[c] += 1 if vowels.include?(c)
-  end
-  a.map.to_h do |value,key|
+    a = a.each_with_object(Hash.new(0)) do |c,h| 
+      h[c] += 1 if vowels.include?(c) 
+    end
+    a.map.to_h do |value,key|
     a = key,value
     a
-  end
+    end
   end
 end
 
@@ -63,4 +63,4 @@ week_fire.facebook(1_000_000)
 
 week_fire.array_hash(["make", "it", "real", 34, 925, 322, 0, 1, 2, 3])
 
-puts week_fire.vocales(["c", "o", "m", "p", "u", "t", "a", "d", "o", "r", "a"])
+week_fire.vocales(["c", "o", "m", "p", "u", "t", "a", "d", "o", "r", "a"])
