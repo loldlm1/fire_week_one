@@ -47,8 +47,8 @@ class Week
       h[c] += 1 if vowels.include?(c) 
     end
     a.map.to_h do |value,key|
-    a = key,value
-    a
+      a = key,value
+      a
     end
   end
 end
